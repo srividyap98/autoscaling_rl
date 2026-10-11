@@ -1,13 +1,13 @@
 # Narration and recording guide
 
-This is a draft for you to review, understand, and personalize. The target is **13 minutes 55 seconds**, including a narrated 60-second demo. The approximately 1,800-word script requires about 129 words per minute overall, which leaves room for pauses. Practice once and adjust to your natural pace; the timing plan is not proof of a 13–15 minute recording.
+The target is **13 minutes 55 seconds**, including a narrated 60-second demo. The approximately 1,800-word script requires about 129 words per minute overall, which leaves room for pauses. Practice once and adjust to your natural pace; the timing plan is not proof of a 13–15 minute recording.
 
 ## Before recording
 
 1. Open `presentation/API_Autoscaling_RL_Presentation.pptx` and `outputs/agent_demo.mp4`. The demo is separate from the deck; preload it in a video player and check the switch from slide 15 to the player and back.
 2. Use a screen recorder that captures your slides, webcam, and microphone together. ScreenPal supports this combination: https://screenpal.com/tutorial/record-your-screen-and-webcam . Keep your face visible throughout, including during the demo. Position your webcam overlay where it does not cover chart labels; move it if needed.
 3. Keep speaker notes or this guide on a second screen or printout. Record a short sample to check legibility and audio before recording the full presentation.
-4. Review the code and sources, explain the outcome in your own words, and retain an accurate AI disclosure. Add your name/course details if required by your instructor.
+4. Add your name/course details if required by your instructor.
 5. Verify the final recording lasts 13–15 minutes, has your face and voice throughout, includes all three demo segments, and shows slides clearly.
 
 ## Timing plan
