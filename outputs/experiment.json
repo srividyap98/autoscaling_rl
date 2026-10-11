@@ -1,0 +1,260 @@
+{
+  "config": {
+    "seconds": 1800,
+    "interval": 10,
+    "capacity": 20,
+    "startup": 20,
+    "maximum": 10,
+    "queue_limit": 1000,
+    "timeout": 10,
+    "target": 2,
+    "cost_weight": 0.1,
+    "violation_weight": 5.0,
+    "queue_weight": 0.5,
+    "switch_weight": 0.02
+  },
+  "fixed_replicas": 8,
+  "threshold": {
+    "upper": 0.6,
+    "lower": 0.2,
+    "cooldown": 10
+  },
+  "validation": [
+    [
+      10000,
+      "steady"
+    ],
+    [
+      10001,
+      "periodic"
+    ],
+    [
+      10002,
+      "bursty"
+    ],
+    [
+      10003,
+      "steady"
+    ],
+    [
+      10004,
+      "periodic"
+    ],
+    [
+      10005,
+      "bursty"
+    ],
+    [
+      10006,
+      "steady"
+    ],
+    [
+      10007,
+      "periodic"
+    ],
+    [
+      10008,
+      "bursty"
+    ],
+    [
+      10009,
+      "steady"
+    ],
+    [
+      10010,
+      "periodic"
+    ],
+    [
+      10011,
+      "bursty"
+    ],
+    [
+      10012,
+      "steady"
+    ],
+    [
+      10013,
+      "periodic"
+    ],
+    [
+      10014,
+      "bursty"
+    ],
+    [
+      10015,
+      "steady"
+    ],
+    [
+      10016,
+      "periodic"
+    ],
+    [
+      10017,
+      "bursty"
+    ],
+    [
+      10018,
+      "steady"
+    ],
+    [
+      10019,
+      "periodic"
+    ]
+  ],
+  "test": [
+    [
+      20000,
+      "steady"
+    ],
+    [
+      20001,
+      "steady"
+    ],
+    [
+      20002,
+      "steady"
+    ],
+    [
+      20003,
+      "steady"
+    ],
+    [
+      20004,
+      "steady"
+    ],
+    [
+      20005,
+      "steady"
+    ],
+    [
+      20006,
+      "steady"
+    ],
+    [
+      20007,
+      "steady"
+    ],
+    [
+      20008,
+      "steady"
+    ],
+    [
+      20009,
+      "steady"
+    ],
+    [
+      20010,
+      "periodic"
+    ],
+    [
+      20011,
+      "periodic"
+    ],
+    [
+      20012,
+      "periodic"
+    ],
+    [
+      20013,
+      "periodic"
+    ],
+    [
+      20014,
+      "periodic"
+    ],
+    [
+      20015,
+      "periodic"
+    ],
+    [
+      20016,
+      "periodic"
+    ],
+    [
+      20017,
+      "periodic"
+    ],
+    [
+      20018,
+      "periodic"
+    ],
+    [
+      20019,
+      "periodic"
+    ],
+    [
+      20020,
+      "bursty"
+    ],
+    [
+      20021,
+      "bursty"
+    ],
+    [
+      20022,
+      "bursty"
+    ],
+    [
+      20023,
+      "bursty"
+    ],
+    [
+      20024,
+      "bursty"
+    ],
+    [
+      20025,
+      "bursty"
+    ],
+    [
+      20026,
+      "bursty"
+    ],
+    [
+      20027,
+      "bursty"
+    ],
+    [
+      20028,
+      "bursty"
+    ],
+    [
+      20029,
+      "bursty"
+    ]
+  ],
+  "runs": [
+    {
+      "seed": 0,
+      "steps": 50000,
+      "best_step": 50000,
+      "elapsed_seconds": 9.071253088000049
+    },
+    {
+      "seed": 1,
+      "steps": 50000,
+      "best_step": 50000,
+      "elapsed_seconds": 9.444046866999997
+    },
+    {
+      "seed": 2,
+      "steps": 50000,
+      "best_step": 30720,
+      "elapsed_seconds": 10.026868127999933
+    },
+    {
+      "seed": 3,
+      "steps": 50000,
+      "best_step": 50000,
+      "elapsed_seconds": 9.903237859
+    },
+    {
+      "seed": 4,
+      "steps": 50000,
+      "best_step": 50000,
+      "elapsed_seconds": 9.774293037999996
+    }
+  ],
+  "framework": "NumPy explicit backpropagation",
+  "demo_seed": 2
+}

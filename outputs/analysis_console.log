@@ -1,0 +1,152 @@
+{
+  "fixed": {
+    "all": {
+      "replica_seconds": 14250.0,
+      "violation_rate": 0.0457987069987724,
+      "p95_wait_seconds": 1.0333333333333334,
+      "scaling_actions": 6.0,
+      "invalid_actions": 0.0,
+      "max_queue": 609.3333333333334,
+      "return_": -41.01491246813585
+    },
+    "steady": {
+      "replica_seconds": 14250.0,
+      "violation_rate": 0.031489642934000875,
+      "p95_wait_seconds": 0.0,
+      "scaling_actions": 6.0,
+      "invalid_actions": 0.0,
+      "max_queue": 764.5,
+      "return_": -44.95072117471257
+    },
+    "periodic": {
+      "replica_seconds": 14250.0,
+      "violation_rate": 0.02256785475306593,
+      "p95_wait_seconds": 0.2,
+      "scaling_actions": 6.0,
+      "invalid_actions": 0.0,
+      "max_queue": 509.9,
+      "return_": -33.59220564427671
+    },
+    "bursty": {
+      "replica_seconds": 14250.0,
+      "violation_rate": 0.08333862330925039,
+      "p95_wait_seconds": 2.9,
+      "scaling_actions": 6.0,
+      "invalid_actions": 0.0,
+      "max_queue": 553.6,
+      "return_": -44.50181058541826
+    }
+  },
+  "threshold": {
+    "all": {
+      "replica_seconds": 15905.0,
+      "violation_rate": 0.06590803886892334,
+      "p95_wait_seconds": 1.6666666666666667,
+      "scaling_actions": 17.0,
+      "invalid_actions": 41.733333333333334,
+      "max_queue": 735.1333333333333,
+      "return_": -52.44231783091057
+    },
+    "steady": {
+      "replica_seconds": 16257.0,
+      "violation_rate": 0.036380871868338334,
+      "p95_wait_seconds": 0.0,
+      "scaling_actions": 7.2,
+      "invalid_actions": 50.5,
+      "max_queue": 791.8,
+      "return_": -51.92877086632681
+    },
+    "periodic": {
+      "replica_seconds": 16527.0,
+      "violation_rate": 0.026664009749462862,
+      "p95_wait_seconds": 0.4,
+      "scaling_actions": 22.4,
+      "invalid_actions": 48.0,
+      "max_queue": 554.2,
+      "return_": -40.1566174317414
+    },
+    "bursty": {
+      "replica_seconds": 14931.0,
+      "violation_rate": 0.1346792349889688,
+      "p95_wait_seconds": 4.6,
+      "scaling_actions": 21.4,
+      "invalid_actions": 26.7,
+      "max_queue": 859.4,
+      "return_": -65.2415651946635
+    }
+  },
+  "ppo": {
+    "all": {
+      "replica_seconds": 17599.673333333332,
+      "violation_rate": 0.02501256162002284,
+      "p95_wait_seconds": 0.13333333333333333,
+      "scaling_actions": 8.1,
+      "invalid_actions": 171.9,
+      "max_queue": 436.5,
+      "return_": -41.41960235776058
+    },
+    "steady": {
+      "replica_seconds": 17396.42,
+      "violation_rate": 0.05054552284927001,
+      "p95_wait_seconds": 0.2,
+      "scaling_actions": 7.98,
+      "invalid_actions": 172.02,
+      "max_queue": 765.7,
+      "return_": -66.94239267639783
+    },
+    "periodic": {
+      "replica_seconds": 17682.6,
+      "violation_rate": 0.0238991869658169,
+      "p95_wait_seconds": 0.2,
+      "scaling_actions": 8.32,
+      "invalid_actions": 171.68,
+      "max_queue": 510.9,
+      "return_": -38.68107005825958
+    },
+    "bursty": {
+      "replica_seconds": 17720.0,
+      "violation_rate": 0.0005929750449816162,
+      "p95_wait_seconds": 0.0,
+      "scaling_actions": 8.0,
+      "invalid_actions": 172.0,
+      "max_queue": 32.9,
+      "return_": -18.63534433862434
+    }
+  },
+  "ppo_runs": [
+    {
+      "seed": 0,
+      "cost": 17705.0,
+      "violation": 0.018891280431174287
+    },
+    {
+      "seed": 1,
+      "cost": 17720.0,
+      "violation": 0.01806954909142109
+    },
+    {
+      "seed": 2,
+      "cost": 17148.366666666665,
+      "violation": 0.05114114905492347
+    },
+    {
+      "seed": 3,
+      "cost": 17705.0,
+      "violation": 0.018891280431174287
+    },
+    {
+      "seed": 4,
+      "cost": 17720.0,
+      "violation": 0.01806954909142109
+    }
+  ],
+  "cost_saving_vs_fixed": -0.23506479532163738,
+  "goal_met": false,
+  "training_seconds": 48.219698979999976,
+  "machine": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  }
+}

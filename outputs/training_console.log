@@ -1,0 +1,27 @@
+Validated baselines: 8 0.6 0.2 10
+seed=0 steps=10240 return=-73.14 validation violations=2.3084% cost=17720
+seed=0 steps=20480 return=-34.84 validation violations=2.3084% cost=17720
+seed=0 steps=30720 return=-24.92 validation violations=2.3084% cost=17720
+seed=0 steps=40960 return=-37.42 validation violations=2.3084% cost=17720
+seed=0 steps=50000 return=-27.30 validation violations=2.3084% cost=17720
+seed=1 steps=10240 return=-44.82 validation violations=2.3084% cost=17720
+seed=1 steps=20480 return=-32.77 validation violations=2.3084% cost=17720
+seed=1 steps=30720 return=-28.28 validation violations=7.5598% cost=16830
+seed=1 steps=40960 return=-39.68 validation violations=2.3084% cost=17720
+seed=1 steps=50000 return=-41.27 validation violations=2.3084% cost=17720
+seed=2 steps=10240 return=-35.22 validation violations=22.2599% cost=14356
+seed=2 steps=20480 return=-23.89 validation violations=2.6078% cost=17666
+seed=2 steps=30720 return=-40.94 validation violations=2.6102% cost=17665
+seed=2 steps=40960 return=-35.64 validation violations=2.3084% cost=17720
+seed=2 steps=50000 return=-38.40 validation violations=2.3084% cost=17720
+seed=3 steps=10240 return=-51.34 validation violations=2.3084% cost=17720
+seed=3 steps=20480 return=-31.44 validation violations=2.3084% cost=17720
+seed=3 steps=30720 return=-33.65 validation violations=2.3084% cost=17720
+seed=3 steps=40960 return=-36.06 validation violations=2.3084% cost=17720
+seed=3 steps=50000 return=-42.18 validation violations=2.3084% cost=17720
+seed=4 steps=10240 return=-43.75 validation violations=2.3084% cost=17720
+seed=4 steps=20480 return=-41.97 validation violations=2.3084% cost=17720
+seed=4 steps=30720 return=-37.91 validation violations=2.3084% cost=17720
+seed=4 steps=40960 return=-36.86 validation violations=2.3084% cost=17720
+seed=4 steps=50000 return=-35.49 validation violations=2.3084% cost=17720
+Experiment complete
