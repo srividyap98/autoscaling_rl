@@ -153,7 +153,7 @@ The project produced a working simulator, a tested PPO implementation, two basel
 
 Target: 25 seconds.
 
-The references connect back to Part 1, and full links are in the repository. OpenAI ChatGPT and Anthropic Claude helped implement and test code, run and analyze the experiments, and draft these slides and narration. I need to review that assistance, verify the sources, and explain the work in my own words. The results come from actual simulator runs.
+The references connect back to Part 1, and full links are in the repository. OpenAI ChatGPT and Anthropic Claude helped implement and test code, run and analyze the experiments, and draft these slides and narration. The results come from actual simulator runs.
 
 ## Understand these points before presenting
 
@@ -173,7 +173,7 @@ The project is published at https://github.com/srividyap98/autoscaling_rl . Keep
 
 ## AI disclosure
 
-OpenAI ChatGPT assisted the original implementation, numerical tests, experiment organization, analysis of measured outputs, and preparation of slides and narration. Anthropic Claude assisted the ten-seed confidence intervals, component ablations, entropy diagnostics, and the corresponding updates to the code, README, slides, and narration. The student must review the code and citations, understand the result interpretation, and create the final recording in their own voice. The recording guide and slide notes are drafts, not a substitute for that review.
+OpenAI ChatGPT helped implement code, write tests, organize the experiment, analyze measured outputs, and draft slides and narration. Anthropic Claude helped add the ten-seed confidence intervals, component ablations, and entropy diagnostics, and update the README, slides, and narration to match. Training metrics come from actual executions of the included simulator.
 
 ## File verification
 
