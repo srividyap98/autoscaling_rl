@@ -228,31 +228,61 @@
       "seed": 0,
       "steps": 50000,
       "best_step": 50000,
-      "elapsed_seconds": 7.739674500189722
+      "elapsed_seconds": 16.220066790934652
     },
     {
       "seed": 1,
       "steps": 50000,
       "best_step": 40960,
-      "elapsed_seconds": 7.5719333328306675
+      "elapsed_seconds": 16.02120687509887
     },
     {
       "seed": 2,
       "steps": 50000,
       "best_step": 30720,
-      "elapsed_seconds": 7.918184542097151
+      "elapsed_seconds": 15.663224042160437
     },
     {
       "seed": 3,
       "steps": 50000,
       "best_step": 50000,
-      "elapsed_seconds": 7.6755957920104265
+      "elapsed_seconds": 15.19452404184267
     },
     {
       "seed": 4,
       "steps": 50000,
       "best_step": 50000,
-      "elapsed_seconds": 8.503101291134953
+      "elapsed_seconds": 15.228417167207226
+    },
+    {
+      "seed": 5,
+      "steps": 50000,
+      "best_step": 50000,
+      "elapsed_seconds": 15.549956874921918
+    },
+    {
+      "seed": 6,
+      "steps": 50000,
+      "best_step": 40960,
+      "elapsed_seconds": 16.156960166990757
+    },
+    {
+      "seed": 7,
+      "steps": 50000,
+      "best_step": 50000,
+      "elapsed_seconds": 14.205686916830018
+    },
+    {
+      "seed": 8,
+      "steps": 50000,
+      "best_step": 50000,
+      "elapsed_seconds": 8.026876040967181
+    },
+    {
+      "seed": 9,
+      "steps": 50000,
+      "best_step": 50000,
+      "elapsed_seconds": 8.01321787503548
     }
   ],
   "framework": "NumPy explicit backpropagation",

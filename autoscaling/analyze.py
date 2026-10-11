@@ -1,6 +1,7 @@
 """Aggregate raw results and make scientific plots and a real agent demo."""
-import csv, json, platform, time
+import contextlib, csv, json, platform, shutil, time
 from pathlib import Path
+from types import SimpleNamespace
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -10,6 +11,7 @@ from .experiment import OUT, evaluate, VALID, TEST, score, writecsv
 from .environment import Config
 from .baselines import Fixed, Threshold
 from .ppo import PPO
+from .stats import ci95
 
 def readcsv(path):
     with open(path) as f:
@@ -51,6 +53,13 @@ def main():
         rr = [r for r in rows if r['policy'] == 'ppo' and r['training_seed'] == run['seed']]
         per_run.append(dict(seed=run['seed'], cost=float(np.mean([r['replica_seconds'] for r in rr])), violation=float(np.mean([r['violation_rate'] for r in rr]))))
     summary['ppo_runs'] = per_run
+    # Each training seed is one sample: average its 30 test traces first, then form t-intervals across seeds.
+    seed_level = {}
+    for kind in ['all', 'steady', 'periodic', 'bursty']:
+        seed_level[kind] = {}
+        for k in ['replica_seconds', 'violation_rate', 'invalid_actions', 'return_']:
+            seed_level[kind][k] = ci95([np.mean([r[k] for r in rows if r['policy'] == 'ppo' and r['training_seed'] == run['seed'] and (kind == 'all' or r['kind'] == kind)]) for run in meta['runs']])
+    summary['ppo_seed_level_95ci'] = seed_level
     summary['cost_saving_vs_fixed'] = 1 - summary['ppo']['all']['replica_seconds'] / summary['fixed']['all']['replica_seconds']
     summary['goal_met'] = bool(summary['cost_saving_vs_fixed'] >= 0.1 and all((summary['ppo'][k]['violation_rate'] <= 0.05 for k in ['steady', 'periodic', 'bursty'])))
     summary['training_seconds'] = float(sum((r['elapsed_seconds'] for r in meta['runs'])))
@@ -59,19 +68,38 @@ def main():
     (OUT / 'experiment.json').write_text(json.dumps(meta, indent=2))
     plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 11, 'axes.spines.top': False, 'axes.spines.right': False})
     colors = {'fixed': '#8993a0', 'threshold': '#21867a', 'ppo': '#dc7841'}
+    logs = [readcsv(OUT / f"training_seed{run['seed']}.csv")[1:] for run in meta['runs']]
+    steps = [x['steps'] for x in logs[0]]
+
+    def band(ax, key, color, label):
+        m = [ci95(col) for col in np.array([[x[key] for x in log] for log in logs]).T]
+        ax.plot(steps, [x['mean'] for x in m], color=color, lw=2, label=label)
+        ax.fill_between(steps, [x['ci_low'] for x in m], [x['ci_high'] for x in m], color=color, alpha=0.2, lw=0)
     fig, ax = plt.subplots(figsize=(10, 5))
-    for run in meta['runs']:
-        log = readcsv(OUT / f"training_seed{run['seed']}.csv")
-        ax.plot([x['steps'] for x in log[1:]], [x['mean_episode_return'] for x in log[1:]], label=f"Seed {run['seed']}")
-    ax.set(xlabel='Training decisions', ylabel='Mean return over last 20 episodes', title='Training return varies across independent runs')
-    ax.legend(ncol=5)
+    for log in logs:
+        ax.plot(steps, [x['mean_episode_return'] for x in log], color=colors['ppo'], alpha=0.2, lw=0.8)
+    band(ax, 'mean_episode_return', colors['ppo'], f'Mean and 95% CI across {len(logs)} seeds')
+    ax.set(xlabel='Training decisions', ylabel='Mean return over last 20 episodes', title='Training return across independent seeds (thin lines: individual seeds)')
+    ax.legend()
     fig.tight_layout()
     fig.savefig(OUT / 'learning_curve.png', dpi=160)
+    plt.close(fig)
+    fig, axes = plt.subplots(1, 2, figsize=(12, 4.5))
+    band(axes[0], 'policy_entropy', colors['ppo'], 'Policy entropy (categorical, in the loss)')
+    band(axes[0], 'executed_entropy', colors['threshold'], 'Executed-action entropy (invalid → hold)')
+    axes[0].axhline(np.log(3), color='black', ls=':', lw=1, label='Uniform, ln 3')
+    axes[0].set(xlabel='Training decisions', ylabel='nats', title='Entropy on rollout states', ylim=(0, 1.2))
+    axes[0].legend(fontsize=9)
+    band(axes[1], 'invalid_mass', colors['fixed'], 'Probability on invalid actions')
+    axes[1].set(xlabel='Training decisions', ylabel='Probability', title='Policy mass on actions the environment rejects', ylim=(0, 1))
+    fig.tight_layout()
+    fig.savefig(OUT / 'entropy.png', dpi=160)
     plt.close(fig)
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
     names = ['fixed', 'threshold', 'ppo']
     for ax, key, title, scale in [(axes[0], 'replica_seconds', 'Allocated replica-seconds', 1), (axes[1], 'violation_rate', 'Requests missing waiting target (%)', 100)]:
-        ax.bar(names, [summary[n]['all'][key] * scale for n in names], color=[colors[n] for n in names])
+        ci = seed_level['all'][key]
+        ax.bar(names, [summary[n]['all'][key] * scale for n in names], color=[colors[n] for n in names], yerr=[[0, 0, (ci['mean'] - ci['ci_low']) * scale], [0, 0, (ci['ci_high'] - ci['mean']) * scale]], capsize=6)
         ax.set_title(title)
         if scale == 100:
             ax.axhline(5, color='black', ls='--', lw=1, label='5% limit')
@@ -87,8 +115,14 @@ def main():
     (OUT / 'demo_trace.json').write_text(json.dumps(demo_data, indent=2))
     fig, axes = plt.subplots(3, 1, figsize=(12.8, 7.2), sharex=True)
     fig.subplots_adjust(hspace=0.28, left=0.09, right=0.96, top=0.86, bottom=0.1)
-    writer = FFMpegWriter(fps=9, codec='libx264', extra_args=['-pix_fmt', 'yuv420p', '-crf', '22'])
-    with writer.saving(fig, str(OUT / 'agent_demo.mp4'), 100):
+    if shutil.which('ffmpeg'):
+        writer = FFMpegWriter(fps=9, codec='libx264', extra_args=['-pix_fmt', 'yuv420p', '-crf', '22'])
+        saving = writer.saving(fig, str(OUT / 'agent_demo.mp4'), 100)
+    else:
+        print('FFmpeg not found: saving demo PNGs only; outputs/agent_demo.mp4 was not regenerated.', flush=True)
+        writer = SimpleNamespace(grab_frame=lambda: None)
+        saving = contextlib.nullcontext()
+    with saving:
         for demo in demo_data:
             h = demo['history']
             x = np.array([r['time'] / 60 for r in h])

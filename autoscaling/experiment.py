@@ -1,9 +1,9 @@
-"""Run python -m autoscaling.experiment --steps 50000 --seeds 5."""
+"""Run python -m autoscaling.experiment --steps 50000 --seeds 10."""
 import argparse, csv, json, time
 from pathlib import Path
 import numpy as np
 from .environment import AutoscalingEnv, Config
-from .ppo import PPO, gae
+from .ppo import PPO, gae, entropy_diagnostics
 from .baselines import Fixed, Threshold
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'outputs'
@@ -45,10 +45,12 @@ def writecsv(path, rows):
         w.writeheader()
         w.writerows(rows)
 
-def train(seed, steps):
+def train(seed, steps, out=OUT, **ppo_options):
+    """Logs one row per 1,024-decision rollout; validation columns are NaN between validations."""
+    out.mkdir(parents=True, exist_ok=True)
     start = time.perf_counter()
     env = AutoscalingEnv()
-    model = PPO(seed)
+    model = PPO(seed, **ppo_options)
     rng = np.random.default_rng(500 + seed)
     episode = 0
     obs, _ = env.reset(100000 + seed * 10000, {'kind': 'periodic'})
@@ -65,13 +67,15 @@ def train(seed, steps):
         if step > 0 and (bestscore is None or s <= bestscore):
             bestscore = s
             beststep = step
-            model.save(OUT / f'policy_seed{seed}.npz')
+            model.save(out / f'policy_seed{seed}.npz')
         return (float(np.mean([r['violation_rate'] for r in rows])), float(np.mean([r['replica_seconds'] for r in rows])))
     v, c = validate(0)
-    logs.append(dict(seed=seed, steps=0, mean_episode_return=0, validation_violation=v, validation_cost=c, elapsed_seconds=0, entropy=np.log(3), actor_loss=0, value_mse=0, clip_fraction=0, approx_kl=0))
+    nan = float('nan')
+    logs.append(dict(seed=seed, steps=0, mean_episode_return=nan, validation_violation=v, validation_cost=c, elapsed_seconds=0, entropy=nan, actor_loss=nan, value_mse=nan, clip_fraction=nan, approx_kl=nan, policy_entropy=nan, executed_entropy=nan, invalid_mass=nan))
     step = 0
     while step < steps:
         states = []
+        valid = []
         actions = []
         oldlogs = []
         values = []
@@ -80,6 +84,7 @@ def train(seed, steps):
         terminals = []
         for _ in range(min(1024, steps - step)):
             a, lp, value = model.act(obs)
+            valid.append(env.valid_actions())
             nxt, r, done, _, info = env.step(a)
             states.append(obs)
             actions.append(a)
@@ -96,21 +101,24 @@ def train(seed, steps):
                 episode_return = 0
                 episode += 1
                 obs, _ = env.reset(100000 + seed * 10000 + episode, {'kind': str(rng.choice(['periodic', 'bursty']))})
-        advantage, returns = gae(np.array(rewards), np.array(values), np.array(nextvalues), np.array(terminals))
-        stats = model.update(np.array(states), np.array(actions), np.array(oldlogs), advantage, returns)
-        if step % 10240 == 0 or step == steps:
-            v, c = validate(step)
-            row = dict(seed=seed, steps=step, mean_episode_return=float(np.mean(completed[-20:])), validation_violation=v, validation_cost=c, elapsed_seconds=time.perf_counter() - start, **stats)
-            logs.append(row)
-            writecsv(OUT / f'training_seed{seed}.csv', logs)
-            print(f"seed={seed} steps={step} return={row['mean_episode_return']:.2f} validation violations={v:.4%} cost={c:.0f}", flush=True)
-    model.save(OUT / f'final_seed{seed}.npz')
+        states = np.array(states)
+        rollout = entropy_diagnostics(model.probabilities(states), np.array(valid))
+        advantage, returns = gae(np.array(rewards), np.array(values), np.array(nextvalues), np.array(terminals), model.gamma, model.lam)
+        stats = model.update(states, np.array(actions), np.array(oldlogs), advantage, returns)
+        validated = step % 10240 == 0 or step == steps
+        v, c = validate(step) if validated else (nan, nan)
+        row = dict(seed=seed, steps=step, mean_episode_return=float(np.mean(completed[-20:])) if completed else nan, validation_violation=v, validation_cost=c, elapsed_seconds=time.perf_counter() - start, **stats, **rollout)
+        logs.append(row)
+        if validated:
+            writecsv(out / f'training_seed{seed}.csv', logs)
+            print(f"{out.name} seed={seed} steps={step} return={row['mean_episode_return']:.2f} validation violations={v:.4%} cost={c:.0f} entropy policy={rollout['policy_entropy']:.3f} executed={rollout['executed_entropy']:.3f}", flush=True)
+    model.save(out / f'final_seed{seed}.npz')
     return dict(seed=seed, steps=step, best_step=beststep, elapsed_seconds=time.perf_counter() - start)
 
 def main():
     args = argparse.ArgumentParser()
     args.add_argument('--steps', type=int, default=50000)
-    args.add_argument('--seeds', type=int, default=5)
+    args.add_argument('--seeds', type=int, default=10)
     a = args.parse_args()
     fixeds = []
     for n in range(1, 11):

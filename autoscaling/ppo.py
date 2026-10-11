@@ -56,6 +56,19 @@ def actor_loss_gradient(logits, actions, oldlog, advantage, clip=0.2, entropy=0.
     loss = -np.mean(np.minimum(ratio * advantage, clipped * advantage)) + entropy * np.mean((p * logp).sum(axis=1))
     return (loss, grad, dict(entropy=float(-np.mean((p * logp).sum(axis=1))), clip_fraction=float(np.mean(np.abs(ratio - 1) > clip)), approx_kl=float(np.mean(ratio - 1 - (logp[idx, actions] - oldlog)))))
 
+def entropy(p):
+    return -np.sum(p * np.log(np.maximum(p, 1e-20)), axis=-1)
+
+def executed_distribution(p, valid):
+    """Push the policy distribution through the environment: invalid remove/add become hold."""
+    q = p * valid
+    q[..., 1] += (p * ~valid).sum(axis=-1)
+    return q
+
+def entropy_diagnostics(p, valid):
+    """Policy entropy (the term in the loss) vs entropy of the actions the environment executes."""
+    return dict(policy_entropy=float(np.mean(entropy(p))), executed_entropy=float(np.mean(entropy(executed_distribution(p, valid)))), invalid_mass=float(np.mean((p * ~valid).sum(axis=-1))))
+
 def gae(rewards, values, next_values, terminals, gamma=0.99, lam=0.95):
     """No bootstrapping or recursion through a true terminal boundary."""
     advantage = np.zeros(len(rewards))
@@ -69,12 +82,19 @@ def gae(rewards, values, next_values, terminals, gamma=0.99, lam=0.95):
 
 class PPO:
 
-    def __init__(self, seed=0, lr=0.0003, entropy=0.01):
+    def __init__(self, seed=0, lr=0.0003, entropy=0.01, clip=0.2, gamma=0.99, lam=0.95):
+        """clip=np.inf removes clipping; lam=1 (Monte Carlo) or lam=0 (one-step TD) removes GAE."""
         self.rng = np.random.default_rng(seed)
         self.actor = MLP(9, 3, self.rng, 0.01)
         self.critic = MLP(9, 1, self.rng)
         self.lr = lr
         self.entropy = entropy
+        self.clip = clip
+        self.gamma = gamma
+        self.lam = lam
+
+    def probabilities(self, obs):
+        return softmax(self.actor.forward(obs)[0])
 
     def act(self, obs, deterministic=False):
         z, _ = self.actor.forward(obs[None, :])
@@ -92,7 +112,7 @@ class PPO:
         for _ in range(epochs):
             for ids in np.array_split(self.rng.permutation(len(obs)), int(np.ceil(len(obs) / batch))):
                 z, c = self.actor.forward(obs[ids])
-                loss, dz, s = actor_loss_gradient(z, actions[ids], oldlog[ids], adv[ids], entropy=self.entropy)
+                loss, dz, s = actor_loss_gradient(z, actions[ids], oldlog[ids], adv[ids], clip=self.clip, entropy=self.entropy)
                 self.actor.update(self.actor.backward(dz, c), self.lr)
                 val, c = self.critic.forward(obs[ids])
                 error = val[:, 0] - returns[ids]

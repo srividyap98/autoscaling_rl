@@ -1,27 +1,52 @@
 Validated baselines: 8 0.6 0.2 10
-seed=0 steps=10240 return=-73.14 validation violations=2.3084% cost=17720
-seed=0 steps=20480 return=-34.84 validation violations=2.3084% cost=17720
-seed=0 steps=30720 return=-24.92 validation violations=2.3084% cost=17720
-seed=0 steps=40960 return=-37.42 validation violations=2.3084% cost=17720
-seed=0 steps=50000 return=-27.30 validation violations=2.3084% cost=17720
-seed=1 steps=10240 return=-44.82 validation violations=2.3084% cost=17720
-seed=1 steps=20480 return=-32.77 validation violations=2.3084% cost=17720
-seed=1 steps=30720 return=-28.28 validation violations=7.5598% cost=16830
-seed=1 steps=40960 return=-39.68 validation violations=2.3084% cost=17720
-seed=1 steps=50000 return=-41.27 validation violations=2.3084% cost=17720
-seed=2 steps=10240 return=-35.22 validation violations=22.2599% cost=14356
-seed=2 steps=20480 return=-23.89 validation violations=2.6078% cost=17666
-seed=2 steps=30720 return=-40.94 validation violations=2.6102% cost=17665
-seed=2 steps=40960 return=-35.64 validation violations=2.3084% cost=17720
-seed=2 steps=50000 return=-38.40 validation violations=2.3084% cost=17720
-seed=3 steps=10240 return=-51.34 validation violations=2.3084% cost=17720
-seed=3 steps=20480 return=-31.44 validation violations=2.3084% cost=17720
-seed=3 steps=30720 return=-33.65 validation violations=2.3084% cost=17720
-seed=3 steps=40960 return=-36.06 validation violations=2.3084% cost=17720
-seed=3 steps=50000 return=-42.18 validation violations=2.3084% cost=17720
-seed=4 steps=10240 return=-43.75 validation violations=2.3084% cost=17720
-seed=4 steps=20480 return=-41.97 validation violations=2.3084% cost=17720
-seed=4 steps=30720 return=-37.91 validation violations=2.3084% cost=17720
-seed=4 steps=40960 return=-36.86 validation violations=2.3084% cost=17720
-seed=4 steps=50000 return=-35.49 validation violations=2.3084% cost=17720
+outputs seed=0 steps=10240 return=-73.14 validation violations=2.3084% cost=17720 entropy policy=0.793 executed=0.261
+outputs seed=0 steps=20480 return=-34.84 validation violations=2.3084% cost=17720 entropy policy=0.615 executed=0.104
+outputs seed=0 steps=30720 return=-24.92 validation violations=2.3084% cost=17720 entropy policy=0.512 executed=0.092
+outputs seed=0 steps=40960 return=-37.42 validation violations=2.3084% cost=17720 entropy policy=0.596 executed=0.063
+outputs seed=0 steps=50000 return=-28.47 validation violations=2.3084% cost=17720 entropy policy=0.687 executed=0.117
+outputs seed=1 steps=10240 return=-44.82 validation violations=2.3084% cost=17720 entropy policy=0.680 executed=0.276
+outputs seed=1 steps=20480 return=-32.77 validation violations=2.3084% cost=17720 entropy policy=0.673 executed=0.177
+outputs seed=1 steps=30720 return=-28.28 validation violations=7.5598% cost=16830 entropy policy=0.669 executed=0.145
+outputs seed=1 steps=40960 return=-40.52 validation violations=2.6743% cost=17640 entropy policy=0.675 executed=0.234
+outputs seed=1 steps=50000 return=-42.56 validation violations=2.3084% cost=17720 entropy policy=0.586 executed=0.147
+outputs seed=2 steps=10240 return=-35.22 validation violations=22.2599% cost=14356 entropy policy=0.725 executed=0.270
+outputs seed=2 steps=20480 return=-23.89 validation violations=2.6078% cost=17666 entropy policy=0.508 executed=0.098
+outputs seed=2 steps=30720 return=-40.94 validation violations=2.6102% cost=17665 entropy policy=0.507 executed=0.089
+outputs seed=2 steps=40960 return=-35.64 validation violations=2.3084% cost=17720 entropy policy=0.714 executed=0.149
+outputs seed=2 steps=50000 return=-37.84 validation violations=2.3084% cost=17720 entropy policy=0.677 executed=0.112
+outputs seed=3 steps=10240 return=-51.34 validation violations=2.3084% cost=17720 entropy policy=0.583 executed=0.192
+outputs seed=3 steps=20480 return=-31.44 validation violations=2.3084% cost=17720 entropy policy=0.504 executed=0.097
+outputs seed=3 steps=30720 return=-33.65 validation violations=2.3084% cost=17720 entropy policy=0.622 executed=0.075
+outputs seed=3 steps=40960 return=-36.06 validation violations=2.3084% cost=17720 entropy policy=0.460 executed=0.074
+outputs seed=3 steps=50000 return=-42.18 validation violations=2.3084% cost=17720 entropy policy=0.596 executed=0.101
+outputs seed=4 steps=10240 return=-43.75 validation violations=2.3084% cost=17720 entropy policy=0.650 executed=0.276
+outputs seed=4 steps=20480 return=-41.97 validation violations=2.3084% cost=17720 entropy policy=0.470 executed=0.112
+outputs seed=4 steps=30720 return=-37.91 validation violations=2.3084% cost=17720 entropy policy=0.656 executed=0.128
+outputs seed=4 steps=40960 return=-36.86 validation violations=2.3084% cost=17720 entropy policy=0.659 executed=0.105
+outputs seed=4 steps=50000 return=-35.49 validation violations=2.3084% cost=17720 entropy policy=0.664 executed=0.077
+outputs seed=5 steps=10240 return=-43.84 validation violations=2.3084% cost=17720 entropy policy=0.738 executed=0.315
+outputs seed=5 steps=20480 return=-34.05 validation violations=2.3084% cost=17720 entropy policy=0.469 executed=0.176
+outputs seed=5 steps=30720 return=-32.30 validation violations=2.3084% cost=17720 entropy policy=0.345 executed=0.105
+outputs seed=5 steps=40960 return=-42.11 validation violations=2.3084% cost=17720 entropy policy=0.480 executed=0.106
+outputs seed=5 steps=50000 return=-31.24 validation violations=2.3084% cost=17720 entropy policy=0.734 executed=0.246
+outputs seed=6 steps=10240 return=-49.03 validation violations=2.3084% cost=17720 entropy policy=0.739 executed=0.305
+outputs seed=6 steps=20480 return=-31.04 validation violations=2.3084% cost=17720 entropy policy=0.528 executed=0.213
+outputs seed=6 steps=30720 return=-37.94 validation violations=2.3084% cost=17720 entropy policy=0.556 executed=0.154
+outputs seed=6 steps=40960 return=-32.99 validation violations=2.4711% cost=17690 entropy policy=0.508 executed=0.095
+outputs seed=6 steps=50000 return=-38.91 validation violations=2.4229% cost=17702 entropy policy=0.557 executed=0.121
+outputs seed=7 steps=10240 return=-40.25 validation violations=2.3084% cost=17720 entropy policy=0.610 executed=0.252
+outputs seed=7 steps=20480 return=-43.07 validation violations=2.3084% cost=17720 entropy policy=0.493 executed=0.239
+outputs seed=7 steps=30720 return=-32.92 validation violations=2.3084% cost=17720 entropy policy=0.741 executed=0.475
+outputs seed=7 steps=40960 return=-37.38 validation violations=2.3084% cost=17720 entropy policy=0.833 executed=0.472
+outputs seed=7 steps=50000 return=-34.83 validation violations=2.3084% cost=17720 entropy policy=0.745 executed=0.370
+outputs seed=8 steps=10240 return=-58.09 validation violations=2.3084% cost=17720 entropy policy=0.842 executed=0.533
+outputs seed=8 steps=20480 return=-41.76 validation violations=2.3084% cost=17720 entropy policy=0.690 executed=0.347
+outputs seed=8 steps=30720 return=-39.20 validation violations=2.3084% cost=17720 entropy policy=0.663 executed=0.369
+outputs seed=8 steps=40960 return=-30.48 validation violations=2.3084% cost=17720 entropy policy=0.611 executed=0.258
+outputs seed=8 steps=50000 return=-36.55 validation violations=2.3084% cost=17720 entropy policy=0.882 executed=0.370
+outputs seed=9 steps=10240 return=-40.10 validation violations=2.3084% cost=17720 entropy policy=0.561 executed=0.291
+outputs seed=9 steps=20480 return=-44.73 validation violations=2.3084% cost=17720 entropy policy=0.453 executed=0.155
+outputs seed=9 steps=30720 return=-37.84 validation violations=2.3084% cost=17720 entropy policy=0.422 executed=0.077
+outputs seed=9 steps=40960 return=-30.51 validation violations=2.3084% cost=17720 entropy policy=0.389 executed=0.043
+outputs seed=9 steps=50000 return=-34.25 validation violations=2.3084% cost=17720 entropy policy=0.319 executed=0.031
 Experiment complete

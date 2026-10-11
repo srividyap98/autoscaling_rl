@@ -109,6 +109,10 @@ class AutoscalingEnv:
         self.pending = [x for x in self.pending if x > self.t]
         return (served + expired + overflow, bad + expired + overflow, served / cap, self.q)
 
+    def valid_actions(self):
+        """Remove/hold/add mask; an invalid action is executed as hold."""
+        return np.array([self.active > 1, True, self.active + len(self.pending) < self.c.maximum])
+
     def step(self, action):
         if self.done:
             raise RuntimeError('reset required')

@@ -5,15 +5,15 @@
     "metrics": {
       "seed": 20000,
       "kind": "steady",
-      "return_": -52.57883571428596,
+      "return_": -57.58920000000025,
       "arrivals": 171726,
-      "served": 171023,
-      "failed": 703,
-      "violation_rate": 0.0356556374689913,
-      "replica_seconds": 17720,
+      "served": 170455,
+      "failed": 1271,
+      "violation_rate": 0.04069855467430675,
+      "replica_seconds": 17640,
       "p95_wait_seconds": 0,
       "scaling_actions": 8,
-      "invalid_actions": 172,
+      "invalid_actions": 171,
       "max_queue": 960
     },
     "history": [
@@ -21,37 +21,37 @@
         "time": 10,
         "rate": 93.6,
         "active": 2,
-        "pending": 1,
+        "pending": 0,
         "queue": 536,
         "util": 1.0,
         "interval_bad": 240,
         "interval_resolved": 400,
-        "changed": 1,
-        "reward": -3.20835,
-        "action": 2
+        "changed": 0,
+        "reward": -3.17835,
+        "action": 1
       },
       {
         "time": 20,
         "rate": 97.0,
-        "active": 3,
+        "active": 2,
         "pending": 1,
         "queue": 960,
         "util": 1.0,
         "interval_bad": 546,
         "interval_resolved": 546,
         "changed": 1,
-        "reward": -5.4696,
+        "reward": -5.4596,
         "action": 2
       },
       {
         "time": 30,
         "rate": 92.4,
-        "active": 4,
+        "active": 3,
         "pending": 1,
-        "queue": 915,
+        "queue": 935,
         "util": 1.0,
-        "interval_bad": 969,
-        "interval_resolved": 969,
+        "interval_bad": 949,
+        "interval_resolved": 949,
         "changed": 1,
         "reward": -5.52985,
         "action": 2
@@ -59,9 +59,9 @@
       {
         "time": 40,
         "rate": 98.0,
-        "active": 5,
+        "active": 4,
         "pending": 1,
-        "queue": 920,
+        "queue": 940,
         "util": 1.0,
         "interval_bad": 975,
         "interval_resolved": 975,
@@ -72,66 +72,66 @@
       {
         "time": 50,
         "rate": 95.9,
-        "active": 6,
+        "active": 5,
         "pending": 1,
-        "queue": 866,
+        "queue": 920,
         "util": 1.0,
-        "interval_bad": 1013,
-        "interval_resolved": 1013,
+        "interval_bad": 979,
+        "interval_resolved": 979,
         "changed": 1,
-        "reward": -5.5229,
+        "reward": -5.537449999999999,
         "action": 2
       },
       {
         "time": 60,
         "rate": 95.1,
-        "active": 7,
+        "active": 6,
         "pending": 1,
-        "queue": 617,
+        "queue": 849,
         "util": 1.0,
-        "interval_bad": 1200,
-        "interval_resolved": 1200,
+        "interval_bad": 1022,
+        "interval_resolved": 1022,
         "changed": 1,
-        "reward": -5.4681,
+        "reward": -5.52935,
         "action": 2
       },
       {
         "time": 70,
         "rate": 96.7,
-        "active": 8,
+        "active": 7,
         "pending": 1,
-        "queue": 184,
+        "queue": 616,
         "util": 1.0,
-        "interval_bad": 1180,
-        "interval_resolved": 1400,
+        "interval_bad": 1200,
+        "interval_resolved": 1200,
         "changed": 1,
-        "reward": -4.512235714285714,
+        "reward": -5.45895,
         "action": 2
       },
       {
         "time": 80,
         "rate": 90.8,
-        "active": 9,
+        "active": 8,
         "pending": 1,
-        "queue": 0,
-        "util": 0.6825,
-        "interval_bad": 0,
-        "interval_resolved": 1092,
+        "queue": 124,
+        "util": 1.0,
+        "interval_bad": 1078,
+        "interval_resolved": 1400,
         "changed": 1,
-        "reward": -0.12795,
+        "reward": -4.131349999999999,
         "action": 2
       },
       {
         "time": 90,
         "rate": 95.6,
-        "active": 10,
-        "pending": 0,
+        "active": 9,
+        "pending": 1,
         "queue": 0,
-        "util": 0.5311111111111112,
+        "util": 0.675,
         "interval_bad": 0,
-        "interval_resolved": 956,
-        "changed": 0,
-        "reward": -0.1,
+        "interval_resolved": 1080,
+        "changed": 1,
+        "reward": -0.12445,
         "action": 2
       },
       {
@@ -140,7 +140,7 @@
         "active": 10,
         "pending": 0,
         "queue": 0,
-        "util": 0.5065,
+        "util": 0.5627777777777777,
         "interval_bad": 0,
         "interval_resolved": 1013,
         "changed": 0,
@@ -2356,13 +2356,13 @@
         "changed": 0,
         "metrics": {
           "arrivals": 171726,
-          "served": 171023,
-          "failed": 703,
-          "violation_rate": 0.0356556374689913,
-          "replica_seconds": 17720,
+          "served": 170455,
+          "failed": 1271,
+          "violation_rate": 0.04069855467430675,
+          "replica_seconds": 17640,
           "p95_wait_seconds": 0,
           "scaling_actions": 8,
-          "invalid_actions": 172,
+          "invalid_actions": 171,
           "max_queue": 960
         },
         "reward": -0.1,
@@ -2376,15 +2376,15 @@
     "metrics": {
       "seed": 20010,
       "kind": "periodic",
-      "return_": -17.882149999999985,
+      "return_": -17.803899999999988,
       "arrivals": 142492,
       "served": 142492,
       "failed": 0,
       "violation_rate": 0.0,
-      "replica_seconds": 17720,
+      "replica_seconds": 17640,
       "p95_wait_seconds": 0,
       "scaling_actions": 8,
-      "invalid_actions": 172,
+      "invalid_actions": 145,
       "max_queue": 12
     },
     "history": [
@@ -2392,117 +2392,117 @@
         "time": 10,
         "rate": 34.6,
         "active": 2,
-        "pending": 1,
+        "pending": 0,
         "queue": 3,
         "util": 0.8574999999999999,
         "interval_bad": 0,
         "interval_resolved": 343,
-        "changed": 1,
-        "reward": -0.05025,
-        "action": 2
+        "changed": 0,
+        "reward": -0.02025,
+        "action": 1
       },
       {
         "time": 20,
         "rate": 37.6,
-        "active": 3,
+        "active": 2,
         "pending": 1,
         "queue": 3,
         "util": 0.9399999999999998,
         "interval_bad": 0,
         "interval_resolved": 376,
         "changed": 1,
-        "reward": -0.0619,
+        "reward": -0.0519,
         "action": 2
       },
       {
         "time": 30,
         "rate": 38.2,
-        "active": 4,
+        "active": 3,
         "pending": 1,
-        "queue": 0,
-        "util": 0.6416666666666668,
+        "queue": 11,
+        "util": 0.9350000000000002,
         "interval_bad": 0,
-        "interval_resolved": 385,
+        "interval_resolved": 374,
         "changed": 1,
-        "reward": -0.07,
+        "reward": -0.06175,
         "action": 2
       },
       {
         "time": 40,
         "rate": 40.1,
-        "active": 5,
+        "active": 4,
         "pending": 1,
         "queue": 0,
-        "util": 0.50125,
+        "util": 0.6866666666666668,
         "interval_bad": 0,
-        "interval_resolved": 401,
+        "interval_resolved": 412,
         "changed": 1,
-        "reward": -0.08,
+        "reward": -0.07,
         "action": 2
       },
       {
         "time": 50,
         "rate": 42.5,
-        "active": 6,
+        "active": 5,
         "pending": 1,
         "queue": 0,
-        "util": 0.425,
+        "util": 0.5312499999999999,
         "interval_bad": 0,
         "interval_resolved": 425,
         "changed": 1,
-        "reward": -0.09,
+        "reward": -0.08,
         "action": 2
       },
       {
         "time": 60,
         "rate": 43.3,
-        "active": 7,
+        "active": 6,
         "pending": 1,
         "queue": 0,
-        "util": 0.36083333333333334,
+        "util": 0.433,
         "interval_bad": 0,
         "interval_resolved": 433,
         "changed": 1,
-        "reward": -0.1,
+        "reward": -0.09,
         "action": 2
       },
       {
         "time": 70,
         "rate": 47.8,
-        "active": 8,
+        "active": 7,
         "pending": 1,
         "queue": 0,
-        "util": 0.3414285714285714,
+        "util": 0.3983333333333333,
         "interval_bad": 0,
         "interval_resolved": 478,
         "changed": 1,
-        "reward": -0.11,
+        "reward": -0.1,
         "action": 2
       },
       {
         "time": 80,
         "rate": 49.4,
-        "active": 9,
+        "active": 8,
         "pending": 1,
         "queue": 0,
-        "util": 0.30874999999999997,
+        "util": 0.35285714285714287,
         "interval_bad": 0,
         "interval_resolved": 494,
         "changed": 1,
-        "reward": -0.12000000000000001,
+        "reward": -0.11,
         "action": 2
       },
       {
         "time": 90,
         "rate": 50.5,
-        "active": 10,
-        "pending": 0,
+        "active": 9,
+        "pending": 1,
         "queue": 0,
-        "util": 0.28055555555555556,
+        "util": 0.315625,
         "interval_bad": 0,
         "interval_resolved": 505,
-        "changed": 0,
-        "reward": -0.1,
+        "changed": 1,
+        "reward": -0.12000000000000001,
         "action": 2
       },
       {
@@ -2511,7 +2511,7 @@
         "active": 10,
         "pending": 0,
         "queue": 0,
-        "util": 0.30449999999999994,
+        "util": 0.3383333333333333,
         "interval_bad": 0,
         "interval_resolved": 609,
         "changed": 0,
@@ -3114,7 +3114,7 @@
         "interval_resolved": 340,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 570,
@@ -3127,7 +3127,7 @@
         "interval_resolved": 323,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 580,
@@ -3140,7 +3140,7 @@
         "interval_resolved": 329,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 590,
@@ -3153,7 +3153,7 @@
         "interval_resolved": 356,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 600,
@@ -3166,7 +3166,7 @@
         "interval_resolved": 344,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 610,
@@ -3179,7 +3179,7 @@
         "interval_resolved": 357,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 620,
@@ -3192,7 +3192,7 @@
         "interval_resolved": 399,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 630,
@@ -3205,7 +3205,7 @@
         "interval_resolved": 409,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 640,
@@ -3855,7 +3855,7 @@
         "interval_resolved": 371,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1140,
@@ -3868,7 +3868,7 @@
         "interval_resolved": 389,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1150,
@@ -3881,7 +3881,7 @@
         "interval_resolved": 342,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1160,
@@ -3894,7 +3894,7 @@
         "interval_resolved": 351,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1170,
@@ -3907,7 +3907,7 @@
         "interval_resolved": 376,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1180,
@@ -3920,7 +3920,7 @@
         "interval_resolved": 368,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1190,
@@ -3933,7 +3933,7 @@
         "interval_resolved": 412,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1200,
@@ -3946,7 +3946,7 @@
         "interval_resolved": 385,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1210,
@@ -3959,7 +3959,7 @@
         "interval_resolved": 430,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1220,
@@ -4596,7 +4596,7 @@
         "interval_resolved": 319,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1710,
@@ -4609,7 +4609,7 @@
         "interval_resolved": 340,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1720,
@@ -4622,7 +4622,7 @@
         "interval_resolved": 354,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1730,
@@ -4635,7 +4635,7 @@
         "interval_resolved": 332,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1740,
@@ -4648,7 +4648,7 @@
         "interval_resolved": 349,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1750,
@@ -4661,7 +4661,7 @@
         "interval_resolved": 339,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1760,
@@ -4674,7 +4674,7 @@
         "interval_resolved": 357,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1770,
@@ -4687,7 +4687,7 @@
         "interval_resolved": 408,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1780,
@@ -4700,7 +4700,7 @@
         "interval_resolved": 424,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1790,
@@ -4730,10 +4730,10 @@
           "served": 142492,
           "failed": 0,
           "violation_rate": 0.0,
-          "replica_seconds": 17720,
+          "replica_seconds": 17640,
           "p95_wait_seconds": 0,
           "scaling_actions": 8,
-          "invalid_actions": 172,
+          "invalid_actions": 145,
           "max_queue": 12
         },
         "reward": -0.1,
@@ -4747,133 +4747,133 @@
     "metrics": {
       "seed": 20020,
       "kind": "bursty",
-      "return_": -17.880649999999985,
+      "return_": -17.801399999999987,
       "arrivals": 111041,
       "served": 111041,
       "failed": 0,
       "violation_rate": 0.0,
-      "replica_seconds": 17720,
+      "replica_seconds": 17640,
       "p95_wait_seconds": 0,
       "scaling_actions": 8,
-      "invalid_actions": 172,
-      "max_queue": 4
+      "invalid_actions": 52,
+      "max_queue": 7
     },
     "history": [
       {
         "time": 10,
         "rate": 36.0,
         "active": 2,
-        "pending": 1,
+        "pending": 0,
         "queue": 0,
         "util": 0.9,
         "interval_bad": 0,
         "interval_resolved": 360,
-        "changed": 1,
-        "reward": -0.05035,
-        "action": 2
+        "changed": 0,
+        "reward": -0.02035,
+        "action": 1
       },
       {
         "time": 20,
         "rate": 35.4,
-        "active": 3,
+        "active": 2,
         "pending": 1,
         "queue": 0,
         "util": 0.885,
         "interval_bad": 0,
         "interval_resolved": 354,
         "changed": 1,
-        "reward": -0.060300000000000006,
+        "reward": -0.0503,
         "action": 2
       },
       {
         "time": 30,
         "rate": 38.0,
-        "active": 4,
+        "active": 3,
         "pending": 1,
         "queue": 0,
-        "util": 0.6333333333333332,
+        "util": 0.95,
         "interval_bad": 0,
         "interval_resolved": 380,
         "changed": 1,
-        "reward": -0.07,
+        "reward": -0.06075,
         "action": 2
       },
       {
         "time": 40,
         "rate": 37.4,
-        "active": 5,
+        "active": 4,
         "pending": 1,
         "queue": 0,
-        "util": 0.46749999999999997,
+        "util": 0.6233333333333333,
         "interval_bad": 0,
         "interval_resolved": 374,
         "changed": 1,
-        "reward": -0.08,
+        "reward": -0.07,
         "action": 2
       },
       {
         "time": 50,
         "rate": 37.2,
-        "active": 6,
+        "active": 5,
         "pending": 1,
         "queue": 0,
-        "util": 0.372,
+        "util": 0.465,
         "interval_bad": 0,
         "interval_resolved": 372,
         "changed": 1,
-        "reward": -0.09,
+        "reward": -0.08,
         "action": 2
       },
       {
         "time": 60,
         "rate": 36.3,
-        "active": 7,
+        "active": 6,
         "pending": 1,
         "queue": 0,
-        "util": 0.3025,
+        "util": 0.363,
         "interval_bad": 0,
         "interval_resolved": 363,
         "changed": 1,
-        "reward": -0.1,
+        "reward": -0.09,
         "action": 2
       },
       {
         "time": 70,
         "rate": 32.0,
-        "active": 8,
+        "active": 7,
         "pending": 1,
         "queue": 0,
-        "util": 0.2285714285714286,
+        "util": 0.26666666666666666,
         "interval_bad": 0,
         "interval_resolved": 320,
         "changed": 1,
-        "reward": -0.11,
+        "reward": -0.1,
         "action": 2
       },
       {
         "time": 80,
         "rate": 36.6,
-        "active": 9,
+        "active": 8,
         "pending": 1,
         "queue": 0,
-        "util": 0.22875,
+        "util": 0.26142857142857145,
         "interval_bad": 0,
         "interval_resolved": 366,
         "changed": 1,
-        "reward": -0.12000000000000001,
+        "reward": -0.11,
         "action": 2
       },
       {
         "time": 90,
         "rate": 37.3,
-        "active": 10,
-        "pending": 0,
+        "active": 9,
+        "pending": 1,
         "queue": 0,
-        "util": 0.20722222222222225,
+        "util": 0.23312499999999997,
         "interval_bad": 0,
         "interval_resolved": 373,
-        "changed": 0,
-        "reward": -0.1,
+        "changed": 1,
+        "reward": -0.12000000000000001,
         "action": 2
       },
       {
@@ -4882,7 +4882,7 @@
         "active": 10,
         "pending": 0,
         "queue": 0,
-        "util": 0.17550000000000002,
+        "util": 0.195,
         "interval_bad": 0,
         "interval_resolved": 351,
         "changed": 0,
@@ -4900,7 +4900,7 @@
         "interval_resolved": 361,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 120,
@@ -4913,7 +4913,7 @@
         "interval_resolved": 313,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 130,
@@ -4926,7 +4926,7 @@
         "interval_resolved": 343,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 140,
@@ -4939,7 +4939,7 @@
         "interval_resolved": 384,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 150,
@@ -4952,7 +4952,7 @@
         "interval_resolved": 339,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 160,
@@ -4965,7 +4965,7 @@
         "interval_resolved": 382,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 170,
@@ -4978,7 +4978,7 @@
         "interval_resolved": 352,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 180,
@@ -4991,7 +4991,7 @@
         "interval_resolved": 344,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 190,
@@ -5004,7 +5004,7 @@
         "interval_resolved": 1442,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 200,
@@ -5108,7 +5108,7 @@
         "interval_resolved": 379,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 280,
@@ -5121,7 +5121,7 @@
         "interval_resolved": 1448,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 290,
@@ -5290,7 +5290,7 @@
         "interval_resolved": 379,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 420,
@@ -5303,7 +5303,7 @@
         "interval_resolved": 360,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 430,
@@ -5316,7 +5316,7 @@
         "interval_resolved": 366,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 440,
@@ -5329,7 +5329,7 @@
         "interval_resolved": 349,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 450,
@@ -5342,7 +5342,7 @@
         "interval_resolved": 374,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 460,
@@ -5355,7 +5355,7 @@
         "interval_resolved": 337,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 470,
@@ -5368,7 +5368,7 @@
         "interval_resolved": 389,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 480,
@@ -5381,7 +5381,7 @@
         "interval_resolved": 345,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 490,
@@ -5394,7 +5394,7 @@
         "interval_resolved": 382,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 500,
@@ -5407,7 +5407,7 @@
         "interval_resolved": 377,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 510,
@@ -5420,7 +5420,7 @@
         "interval_resolved": 345,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 520,
@@ -5433,7 +5433,7 @@
         "interval_resolved": 351,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 530,
@@ -5446,7 +5446,7 @@
         "interval_resolved": 367,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 540,
@@ -5459,7 +5459,7 @@
         "interval_resolved": 367,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 550,
@@ -5472,7 +5472,7 @@
         "interval_resolved": 1524,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 560,
@@ -5576,7 +5576,7 @@
         "interval_resolved": 359,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 640,
@@ -5589,7 +5589,7 @@
         "interval_resolved": 319,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 650,
@@ -5602,7 +5602,7 @@
         "interval_resolved": 354,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 660,
@@ -5615,7 +5615,7 @@
         "interval_resolved": 349,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 670,
@@ -5628,7 +5628,7 @@
         "interval_resolved": 370,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 680,
@@ -5641,7 +5641,7 @@
         "interval_resolved": 364,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 690,
@@ -5654,7 +5654,7 @@
         "interval_resolved": 334,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 700,
@@ -5667,7 +5667,7 @@
         "interval_resolved": 340,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 710,
@@ -5680,7 +5680,7 @@
         "interval_resolved": 338,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 720,
@@ -5693,7 +5693,7 @@
         "interval_resolved": 376,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 730,
@@ -5706,7 +5706,7 @@
         "interval_resolved": 1378,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 740,
@@ -5888,7 +5888,7 @@
         "interval_resolved": 394,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 880,
@@ -5901,7 +5901,7 @@
         "interval_resolved": 385,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 890,
@@ -5914,7 +5914,7 @@
         "interval_resolved": 382,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 900,
@@ -5927,7 +5927,7 @@
         "interval_resolved": 343,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 910,
@@ -5940,7 +5940,7 @@
         "interval_resolved": 374,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 920,
@@ -5953,7 +5953,7 @@
         "interval_resolved": 381,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 930,
@@ -5966,7 +5966,7 @@
         "interval_resolved": 346,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 940,
@@ -5979,7 +5979,7 @@
         "interval_resolved": 348,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 950,
@@ -5992,7 +5992,7 @@
         "interval_resolved": 352,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 960,
@@ -6005,7 +6005,7 @@
         "interval_resolved": 329,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 970,
@@ -6018,7 +6018,7 @@
         "interval_resolved": 331,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 980,
@@ -6031,7 +6031,7 @@
         "interval_resolved": 357,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 990,
@@ -6044,7 +6044,7 @@
         "interval_resolved": 380,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1000,
@@ -6057,7 +6057,7 @@
         "interval_resolved": 377,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1010,
@@ -6070,7 +6070,7 @@
         "interval_resolved": 375,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1020,
@@ -6083,7 +6083,7 @@
         "interval_resolved": 399,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1030,
@@ -6096,7 +6096,7 @@
         "interval_resolved": 347,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1040,
@@ -6109,7 +6109,7 @@
         "interval_resolved": 383,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1050,
@@ -6122,7 +6122,7 @@
         "interval_resolved": 365,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1060,
@@ -6135,7 +6135,7 @@
         "interval_resolved": 328,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1070,
@@ -6148,7 +6148,7 @@
         "interval_resolved": 377,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1080,
@@ -6161,7 +6161,7 @@
         "interval_resolved": 354,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1090,
@@ -6174,7 +6174,7 @@
         "interval_resolved": 368,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1100,
@@ -6187,7 +6187,7 @@
         "interval_resolved": 368,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1110,
@@ -6200,7 +6200,7 @@
         "interval_resolved": 370,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1120,
@@ -6213,7 +6213,7 @@
         "interval_resolved": 385,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1130,
@@ -6226,7 +6226,7 @@
         "interval_resolved": 351,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1140,
@@ -6239,7 +6239,7 @@
         "interval_resolved": 390,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1150,
@@ -6252,7 +6252,7 @@
         "interval_resolved": 363,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1160,
@@ -6265,7 +6265,7 @@
         "interval_resolved": 353,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1170,
@@ -6278,7 +6278,7 @@
         "interval_resolved": 360,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1180,
@@ -6291,7 +6291,7 @@
         "interval_resolved": 1666,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1190,
@@ -6447,7 +6447,7 @@
         "interval_resolved": 360,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1310,
@@ -6460,7 +6460,7 @@
         "interval_resolved": 365,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1320,
@@ -6473,7 +6473,7 @@
         "interval_resolved": 343,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1330,
@@ -6486,7 +6486,7 @@
         "interval_resolved": 375,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1340,
@@ -6499,7 +6499,7 @@
         "interval_resolved": 302,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1350,
@@ -6512,7 +6512,7 @@
         "interval_resolved": 446,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1360,
@@ -6525,7 +6525,7 @@
         "interval_resolved": 386,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1370,
@@ -6551,7 +6551,7 @@
         "interval_resolved": 361,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1390,
@@ -6564,7 +6564,7 @@
         "interval_resolved": 351,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1400,
@@ -6577,7 +6577,7 @@
         "interval_resolved": 359,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1410,
@@ -6590,7 +6590,7 @@
         "interval_resolved": 386,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1420,
@@ -6603,7 +6603,7 @@
         "interval_resolved": 348,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1430,
@@ -6616,7 +6616,7 @@
         "interval_resolved": 355,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1440,
@@ -6629,7 +6629,7 @@
         "interval_resolved": 385,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1450,
@@ -6642,7 +6642,7 @@
         "interval_resolved": 360,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1460,
@@ -6655,7 +6655,7 @@
         "interval_resolved": 352,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1470,
@@ -6668,7 +6668,7 @@
         "interval_resolved": 348,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1480,
@@ -6681,7 +6681,7 @@
         "interval_resolved": 369,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1490,
@@ -6694,7 +6694,7 @@
         "interval_resolved": 370,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1500,
@@ -6707,7 +6707,7 @@
         "interval_resolved": 373,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1510,
@@ -6720,7 +6720,7 @@
         "interval_resolved": 351,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1520,
@@ -6733,7 +6733,7 @@
         "interval_resolved": 386,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1530,
@@ -6746,7 +6746,7 @@
         "interval_resolved": 335,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1540,
@@ -6759,7 +6759,7 @@
         "interval_resolved": 359,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1550,
@@ -6772,7 +6772,7 @@
         "interval_resolved": 377,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1560,
@@ -6785,7 +6785,7 @@
         "interval_resolved": 366,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1570,
@@ -6798,7 +6798,7 @@
         "interval_resolved": 375,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1580,
@@ -6811,7 +6811,7 @@
         "interval_resolved": 334,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1590,
@@ -6824,7 +6824,7 @@
         "interval_resolved": 353,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1600,
@@ -6837,7 +6837,7 @@
         "interval_resolved": 340,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1610,
@@ -6850,7 +6850,7 @@
         "interval_resolved": 364,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1620,
@@ -6863,7 +6863,7 @@
         "interval_resolved": 330,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1630,
@@ -6876,7 +6876,7 @@
         "interval_resolved": 339,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1640,
@@ -6889,7 +6889,7 @@
         "interval_resolved": 393,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1650,
@@ -6902,7 +6902,7 @@
         "interval_resolved": 367,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1660,
@@ -6915,7 +6915,7 @@
         "interval_resolved": 380,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1670,
@@ -6928,7 +6928,7 @@
         "interval_resolved": 332,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1680,
@@ -6941,7 +6941,7 @@
         "interval_resolved": 375,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1690,
@@ -6954,7 +6954,7 @@
         "interval_resolved": 339,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1700,
@@ -6967,7 +6967,7 @@
         "interval_resolved": 317,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1710,
@@ -6980,7 +6980,7 @@
         "interval_resolved": 363,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1720,
@@ -6993,7 +6993,7 @@
         "interval_resolved": 383,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1730,
@@ -7006,7 +7006,7 @@
         "interval_resolved": 370,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1740,
@@ -7019,7 +7019,7 @@
         "interval_resolved": 350,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1750,
@@ -7032,7 +7032,7 @@
         "interval_resolved": 349,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1760,
@@ -7045,7 +7045,7 @@
         "interval_resolved": 355,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1770,
@@ -7058,7 +7058,7 @@
         "interval_resolved": 381,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1780,
@@ -7071,7 +7071,7 @@
         "interval_resolved": 370,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1790,
@@ -7084,7 +7084,7 @@
         "interval_resolved": 357,
         "changed": 0,
         "reward": -0.1,
-        "action": 2
+        "action": 1
       },
       {
         "time": 1800,
@@ -7101,14 +7101,14 @@
           "served": 111041,
           "failed": 0,
           "violation_rate": 0.0,
-          "replica_seconds": 17720,
+          "replica_seconds": 17640,
           "p95_wait_seconds": 0,
           "scaling_actions": 8,
-          "invalid_actions": 172,
-          "max_queue": 4
+          "invalid_actions": 52,
+          "max_queue": 7
         },
         "reward": -0.1,
-        "action": 2
+        "action": 1
       }
     ]
   }

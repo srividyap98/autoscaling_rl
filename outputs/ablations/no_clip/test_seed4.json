@@ -1,0 +1,9 @@
+{
+  "seed": 4,
+  "steps": 50000,
+  "best_step": 30720,
+  "elapsed_seconds": 15.001043833093718,
+  "test_violation": 0.04145547599242294,
+  "test_replica_seconds": 16077.566666666668,
+  "test_invalid_actions": 0.6333333333333333
+}
