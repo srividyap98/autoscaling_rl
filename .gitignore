@@ -4,3 +4,4 @@ __pycache__/
 presentation/build/
 presentation/output/
 presentation/.chart-data-*/
+.DS_Store

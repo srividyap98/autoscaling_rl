@@ -228,33 +228,33 @@
       "seed": 0,
       "steps": 50000,
       "best_step": 50000,
-      "elapsed_seconds": 9.071253088000049
+      "elapsed_seconds": 7.739674500189722
     },
     {
       "seed": 1,
       "steps": 50000,
-      "best_step": 50000,
-      "elapsed_seconds": 9.444046866999997
+      "best_step": 40960,
+      "elapsed_seconds": 7.5719333328306675
     },
     {
       "seed": 2,
       "steps": 50000,
       "best_step": 30720,
-      "elapsed_seconds": 10.026868127999933
+      "elapsed_seconds": 7.918184542097151
     },
     {
       "seed": 3,
       "steps": 50000,
       "best_step": 50000,
-      "elapsed_seconds": 9.903237859
+      "elapsed_seconds": 7.6755957920104265
     },
     {
       "seed": 4,
       "steps": 50000,
       "best_step": 50000,
-      "elapsed_seconds": 9.774293037999996
+      "elapsed_seconds": 8.503101291134953
     }
   ],
   "framework": "NumPy explicit backpropagation",
-  "demo_seed": 2
+  "demo_seed": 1
 }
