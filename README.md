@@ -75,7 +75,7 @@ This folder is a complete local Git repository. To provide an accessible reposit
 
 ## AI use disclosure
 
-OpenAI ChatGPT helped implement code, write tests, organize the experiment, analyze measured outputs, and draft slides and narration. Training metrics come from actual executions of the included simulator. Review the implementation, sources, and interpretation and make the final presentation your own. This work does not include a recording impersonating the student.
+OpenAI ChatGPT helped implement code, write tests, organize the experiment, analyze measured outputs, and draft slides and narration. Training metrics come from actual executions of the included simulator. 
 
 ## Research sources
 
